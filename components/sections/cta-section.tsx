@@ -1,0 +1,44 @@
+import Link from "next/link"
+import { Container } from "@/components/container"
+import { Button } from "@/components/ui/button"
+import { FaWhatsapp } from "react-icons/fa"
+
+export function CtaSection() {
+  return (
+    <section>
+      <Container asGrid>
+        <div className="grid grid-cols-10 gap-px">
+          <div aria-hidden className="max-sm:hidden">
+            <div data-grid-content />
+          </div>
+
+          <div className="col-span-full sm:col-span-8">
+            <div
+              data-grid-content
+              className="flex flex-col items-start gap-6 p-6 @4xl:p-12"
+            >
+              <h2 className="text-3xl font-semibold text-balance text-foreground">
+                Need cement or blocks for your next project?
+              </h2>
+              <p className="max-w-2xl text-muted-foreground">
+                Talk to our team about bulk orders, custom delivery schedules,
+                and product recommendations for residential, commercial, and
+                infrastructure builds.
+              </p>
+              <Button asChild size="lg">
+                <Link href="#contact">
+                  Contact Our Sales Team{" "}
+                  <FaWhatsapp className="size-4 text-green-500" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          <div aria-hidden className="max-sm:hidden">
+            <div data-grid-content />
+          </div>
+        </div>
+      </Container>
+    </section>
+  )
+}

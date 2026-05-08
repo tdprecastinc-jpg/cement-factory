@@ -1,0 +1,44 @@
+import { Container } from "@/components/container"
+
+export function MissionSection() {
+  return (
+    <section>
+      <Container asGrid>
+        <div className="grid grid-cols-10 gap-px">
+          <div aria-hidden className="max-sm:hidden">
+            <div data-grid-content />
+          </div>
+
+          <div className="col-span-full sm:col-span-8">
+            <div data-grid-content className="p-6 @4xl:p-12">
+              <h2 className="text-balance text-muted-foreground">
+                Our Mission
+              </h2>
+              <div className="mt-6 space-y-4 text-xl font-medium text-muted-foreground *:leading-relaxed *:text-balance">
+                <p>
+                  <span className="text-2xl text-foreground">
+                    We believe strong communities are built on strong materials
+                  </span>{" "}
+                  — from homes and schools to roads and industrial sites that
+                  demand dependable cement solutions.
+                </p>
+                <p>
+                  <span className="text-2xl text-foreground">
+                    Our mission is to produce high-grade cement and concrete
+                    blocks with uncompromising quality.
+                  </span>{" "}
+                  We combine modern manufacturing, strict testing, and reliable
+                  logistics so contractors can build with confidence.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div aria-hidden className="max-sm:hidden">
+            <div data-grid-content />
+          </div>
+        </div>
+      </Container>
+    </section>
+  )
+}

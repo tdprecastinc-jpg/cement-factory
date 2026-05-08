@@ -1,19 +1,43 @@
-import { Button } from "@/components/ui/button"
+import { CoreValuesSection } from "@/app/(marketing)/about/sections/core-values-section"
+import { MissionSection } from "@/app/(marketing)/about/sections/mission-section"
+import { Separator } from "@/components/container"
+import FooterSection from "@/components/footer"
+import Header from "@/components/header"
+import { ContactGridTwoContactFiveSection } from "@/components/sections/contact-grid-two-contact-five"
+import { CtaSection } from "@/components/sections/cta-section"
+import { GallerySection } from "@/components/sections/gallery-section"
+import { StatsSection } from "@/components/sections/stats-section"
+import HeroSection from "@/components/secondary-hero-4"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <>
+      <Header />
+      <main className="bg-zinc-950/10">
+        <HeroSection />
+        <Separator />
+        <section id="about">
+          <MissionSection />
+        </section>
+        <Separator />
+        <section id="gallery" className="@container">
+          <GallerySection />
+        </section>
+        <Separator />
+
+        <Separator />
+        <CoreValuesSection />
+        <Separator />
+        <StatsSection />
+        <Separator />
+        <ContactGridTwoContactFiveSection />
+        <Separator />
+        <section id="contact">
+          <CtaSection />
+        </section>
+      </main>
+
+      <FooterSection />
+    </>
   )
 }
