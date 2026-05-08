@@ -19,7 +19,7 @@ export const ImageIllustration = () => {
         alt="Cement factory plant overview"
         width={4000}
         height={2000}
-        className="size-full object-cover"
+        className="size-full object-cover dark:brightness-90 dark:contrast-110 dark:invert"
       />
 
       <div
