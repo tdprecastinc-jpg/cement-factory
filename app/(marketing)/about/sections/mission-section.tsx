@@ -2,7 +2,10 @@ import { Container } from "@/components/container"
 
 export function MissionSection() {
   return (
-    <section>
+    <section
+      id="about"
+      className="scroll-mt-24 border-b-2 bg-card/90 py-24 md:py-32"
+    >
       <Container asGrid>
         <div className="grid grid-cols-10 gap-px">
           <div aria-hidden className="max-sm:hidden">
@@ -15,15 +18,15 @@ export function MissionSection() {
                 Our Mission
               </h2>
               <div className="mt-6 space-y-4 text-xl font-medium text-muted-foreground *:leading-relaxed *:text-balance">
-                <p>
-                  <span className="text-2xl text-foreground">
+                <p className="text-balance text-foreground/85">
+                  <span className="text-2xl text-balance text-green-500">
                     We believe strong communities are built on strong materials
                   </span>{" "}
                   — from homes and schools to roads and industrial sites that
                   demand dependable cement solutions.
                 </p>
-                <p>
-                  <span className="text-2xl text-foreground">
+                <p className="text-balance text-foreground/85">
+                  <span className="text-2xl text-balance text-green-500">
                     Our mission is to produce high-grade cement and concrete
                     blocks with uncompromising quality.
                   </span>{" "}

@@ -9,7 +9,10 @@ const stats = [
 
 export function StatsSection() {
   return (
-    <section id="products">
+    <section
+      id="products"
+      className="scroll-mt-24 border-b-2 bg-card/90 py-24 md:py-32"
+    >
       <Container asGrid>
         <div className="grid grid-cols-10 gap-px">
           <div aria-hidden className="max-sm:hidden">

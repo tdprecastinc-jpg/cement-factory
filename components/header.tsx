@@ -202,8 +202,6 @@ export default function HeaderOne() {
           </div>
         </div>
       </header>
-
-      <main role="main" className="h-12 bg-background" />
     </>
   )
 }

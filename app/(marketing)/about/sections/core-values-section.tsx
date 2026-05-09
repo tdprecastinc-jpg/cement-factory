@@ -35,7 +35,10 @@ const values = [
 
 export function CoreValuesSection() {
   return (
-    <section>
+    <section
+      id="core-values"
+      className="scroll-mt-24 bg-card/90 py-24 md:py-32"
+    >
       <Container asGrid>
         <div className="grid grid-cols-10 gap-px">
           <div aria-hidden className="max-sm:hidden">
@@ -59,11 +62,9 @@ export function CoreValuesSection() {
                 data-grid-content
                 className="flex flex-col gap-3 p-6 @4xl:p-12"
               >
-                <value.icon
-                  className={cn("size-5 text-green-700", value.iconClassName)}
-                />
+                <value.icon className={cn("size-5", value.iconClassName)} />
                 <h3 className="font-medium text-foreground">{value.title}</h3>
-                <p className="leading-relaxed text-muted-foreground">
+                <p className="leading-relaxed text-foreground/85">
                   {value.description}
                 </p>
               </div>

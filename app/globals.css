@@ -131,3 +131,10 @@ html {
     @apply font-sans;
     }
 }
+
+/* Avoid [&_.bg-card\/90]:… in JSX — Tailwind v4 + Turbopack can fail CSS parsing on that variant. */
+@layer utilities {
+  .footer-card-tint :where(.bg-card\/90) {
+    @apply bg-foreground/5;
+  }
+}

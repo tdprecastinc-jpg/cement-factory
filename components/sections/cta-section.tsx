@@ -5,7 +5,10 @@ import { FaWhatsapp } from "react-icons/fa"
 
 export function CtaSection() {
   return (
-    <section>
+    <section
+      id="contact"
+      className="scroll-mt-24 border-b-2 bg-card/90 py-12 md:py-24"
+    >
       <Container asGrid>
         <div className="grid grid-cols-10 gap-px">
           <div aria-hidden className="max-sm:hidden">
@@ -15,17 +18,22 @@ export function CtaSection() {
           <div className="col-span-full sm:col-span-8">
             <div
               data-grid-content
-              className="flex flex-col items-start gap-6 p-6 @4xl:p-12"
+              className="flex flex-col items-start gap-6 p-6 @4xl:p-24"
             >
-              <h2 className="text-3xl font-semibold text-balance text-foreground">
+              <h2 className="text-4xl font-semibold text-balance text-foreground">
                 Need cement or blocks for your next project?
               </h2>
-              <p className="max-w-2xl text-muted-foreground">
+              <p className="max-w-2xl text-base text-muted-foreground">
                 Talk to our team about bulk orders, custom delivery schedules,
                 and product recommendations for residential, commercial, and
                 infrastructure builds.
               </p>
-              <Button asChild size="lg">
+              <Button
+                asChild
+                size="lg"
+                variant="secondary"
+                className="ring ring-foreground/30"
+              >
                 <Link href="#contact">
                   Contact Our Sales Team{" "}
                   <FaWhatsapp className="size-4 text-green-500" />
