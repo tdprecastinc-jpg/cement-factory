@@ -32,9 +32,9 @@ const gridImages = [
 ]
 
 const videos = [
-  "/gallery/video-1.mp4",
-  "/gallery/video-2.mp4",
-  "/gallery/video-3.mp4",
+  "/gallery/vid-1.mp4",
+  "/gallery/vid-2.mp4",
+  "/gallery/vid-3.mp4",
 ]
 
 export function GallerySection() {
