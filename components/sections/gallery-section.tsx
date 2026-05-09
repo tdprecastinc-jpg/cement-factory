@@ -98,9 +98,12 @@ export function GallerySection() {
                 {videos.map((src, index) => (
                   <div key={src} data-grid-content className="p-3">
                     <video
-                      controls
                       preload="metadata"
                       // poster={featuredImages[index]}
+                      autoPlay={true}
+                      muted={true}
+                      loop={true}
+                      playsInline
                       className="aspect-video w-full rounded-lg object-cover"
                     >
                       <source src={src} type="video/mp4" />
