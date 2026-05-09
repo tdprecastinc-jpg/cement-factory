@@ -19,7 +19,7 @@ export default function PrimaryHero() {
       </video>
 
       {/* <div className="absolute inset-0 -z-10 bg-black/10" /> */}
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-black/40 via-black/45 to-black/75" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-black/40 via-black/70 to-black/75" />
 
       <div className="mx-auto flex min-h-[78svh] max-w-6xl items-center px-6 py-24 md:py-32 lg:min-h-[84svh]">
         <div className="max-w-3xl">

@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Container } from "@/components/container"
 import { GalleryCarousel } from "../gallery-carousel"
 
@@ -18,27 +17,53 @@ export function GallerySection() {
 
           <div className="col-span-full grid gap-px">
             <div data-grid-content className="p-6 @4xl:p-12">
-              <h2 className="text-balance text-muted-foreground">
+              <h2 className="text-sm font-semibold tracking-[0.14em] text-muted-foreground uppercase">
                 Factory Gallery
               </h2>
-              <p className="mt-6 max-w-2xl text-4xl font-medium text-balance text-foreground">
+              <p className="mt-6 max-w-3xl text-3xl font-semibold text-balance text-foreground sm:text-4xl md:text-5xl">
                 Explore our plant operations, equipment, and finished products
                 in photos and videos.
               </p>
+              {/* <div className="mt-6 flex flex-wrap gap-2">
+                {[
+                  "Quality Controlled",
+                  "Live Plant Operations",
+                  "Fleet Ready",
+                ].map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-border/70 bg-background/70 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur-sm"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div> */}
             </div>
 
-            <div className="relative w-full p-6 @4xl:p-12">
+            <div
+              data-grid-content
+              className="relative overflow-hidden p-3 sm:p-4 @4xl:p-6"
+            >
               <video
                 preload="metadata"
-                // poster={featuredImages[index]}
-                autoPlay={true}
-                muted={true}
-                loop={true}
+                autoPlay
+                muted
+                loop
                 playsInline
-                className="aspect-video w-full rounded-lg object-cover"
+                poster="/gallery/pic-8.jpeg"
+                className="aspect-video w-full rounded-xl object-cover ring-1 ring-white/10"
               >
-                <source src={"/gallery/vid-1.mp4"} type="video/mp4" />
+                <source src="/gallery/vid-1.mp4" type="video/mp4" />
               </video>
+              <div className="pointer-events-none absolute inset-3 rounded-xl bg-linear-to-t from-black/65 via-black/10 to-transparent sm:inset-4 @4xl:inset-6" />
+              <div className="pointer-events-none absolute right-6 bottom-6 left-6 text-white sm:right-8 sm:bottom-8 sm:left-8 @4xl:right-10 @4xl:bottom-10 @4xl:left-10">
+                <p className="text-xs font-semibold tracking-[0.16em] text-white/80 uppercase">
+                  Featured Media
+                </p>
+                <p className="mt-2 text-lg font-semibold text-balance sm:text-2xl">
+                  Construction site operations in real time
+                </p>
+              </div>
             </div>
 
             <GalleryCarousel />

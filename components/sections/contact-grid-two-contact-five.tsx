@@ -17,7 +17,7 @@ export function ContactGridTwoContactFiveSection() {
       className="scroll-mt-24 border-b-2 bg-card/90 py-24 md:py-32"
     >
       <Container className="px-6 py-3 @4xl:px-12">
-        <span className="font-mono text-sm text-muted-foreground uppercase">
+        <span className="text-sm font-semibold tracking-[0.14em] text-muted-foreground uppercase">
           Sales
         </span>
       </Container>
