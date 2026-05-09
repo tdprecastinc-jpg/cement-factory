@@ -22,7 +22,7 @@ export function ContactGridTwoContactFiveSection() {
         </span>
         <div className="grid gap-px @4xl:grid-cols-2">
           <div data-grid-content className="p-6">
-            <h2 className="text-5xl font-semibold tracking-tight text-balance text-foreground">
+            <h2 className="text-3xl leading-[1.2] font-semibold tracking-tight text-balance text-foreground sm:text-4xl md:text-5xl">
               Ready to scale your next construction project?
             </h2>
             <p className="mt-6 text-lg text-balance text-muted-foreground">

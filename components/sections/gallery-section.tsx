@@ -20,7 +20,7 @@ export function GallerySection() {
               <h2 className="text-sm font-semibold tracking-[0.14em] text-muted-foreground uppercase">
                 Factory Gallery
               </h2>
-              <p className="mt-6 max-w-3xl text-3xl font-semibold text-balance text-foreground sm:text-4xl md:text-5xl">
+              <p className="mt-6 max-w-3xl text-3xl leading-[1.2] font-semibold text-balance text-foreground sm:text-4xl md:text-5xl">
                 Explore our plant operations, equipment, and finished products
                 in photos and videos.
               </p>

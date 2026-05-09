@@ -50,7 +50,7 @@ export function CoreValuesSection() {
               <h2 className="text-balance text-muted-foreground">
                 Core Values
               </h2>
-              <p className="mt-6 max-w-2xl text-4xl font-medium text-balance text-foreground">
+              <p className="mt-6 max-w-2xl text-3xl leading-[1.2] font-medium text-balance text-foreground md:text-4xl">
                 The principles that guide every production run, quality check,
                 and delivery from our factory.
               </p>
