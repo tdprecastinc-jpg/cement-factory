@@ -164,7 +164,9 @@ export default function HeaderOne() {
                   aria-label="home"
                   className="flex items-center space-x-2"
                 >
-                  <h1 className="text-2xl font-bold">TD</h1>
+                  <h1 className="text-2xl font-bold text-white in-data-scrolled:text-foreground max-lg:in-data-scrolled:text-foreground! max-lg:in-data-[state=active]:text-foreground">
+                    TD
+                  </h1>
                 </Link>
 
                 <button
@@ -174,8 +176,8 @@ export default function HeaderOne() {
                   }
                   className="relative z-20 -m-2.5 -mr-3 block cursor-pointer p-2.5 lg:hidden"
                 >
-                  <Menu className="m-auto size-5 duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0" />
-                  <X className="absolute inset-0 m-auto size-5 scale-0 -rotate-180 opacity-0 duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100" />
+                  <Menu className="m-auto size-5 text-white duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0 max-lg:in-data-scrolled:text-black!" />
+                  <X className="absolute inset-0 m-auto size-5 scale-0 -rotate-180 text-white opacity-0 duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100 max-lg:in-data-scrolled:text-black" />
                 </button>
               </div>
 
@@ -190,7 +192,7 @@ export default function HeaderOne() {
 
               <div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 in-data-[state=active]:flex max-lg:in-data-[state=active]:mt-6 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
                 <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                  <Button asChild variant="outline" size="sm">
+                  <Button asChild variant="secondary" size="sm">
                     <Link href="#">
                       <span>Request a Quote </span>
                       <FaWhatsapp className="size-4 text-green-500" />
@@ -278,11 +280,17 @@ const NavMenu = () => {
   return (
     <NavigationMenu
       viewport={false}
-      className="**:data-[slot=navigation-menu-content]:top-10 max-lg:hidden"
+      className="**:hover:text-white **:in-data-scrolled:text-foreground! **:in-data-scrolled:hover:text-foreground! **:data-[slot=navigation-menu-content]:top-10 max-lg:hidden"
     >
       <NavigationMenuList className="gap-3">
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink
+            asChild
+            className={cn(
+              navigationMenuTriggerStyle(),
+              "hover:bg-background/15 hover:in-data-scrolled:bg-foreground/10"
+            )}
+          >
             <Link
               className="text-white"
               href="#about"

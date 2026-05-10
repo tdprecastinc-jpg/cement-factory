@@ -15,6 +15,9 @@ import { gridImages } from "@/lib/helper"
 export function GalleryCarousel() {
   return (
     <Carousel
+      opts={{
+        align: "start",
+      }}
       plugins={[
         Autoplay({
           delay: 5000,
@@ -22,9 +25,9 @@ export function GalleryCarousel() {
       ]}
       className="w-full p-6"
     >
-      <CarouselContent className="">
+      <CarouselContent className="-ml-4">
         {gridImages.map((src) => (
-          <CarouselItem key={src} className="basis-full pl-1 lg:basis-1/2">
+          <CarouselItem key={src} className="basis-full pl-4 lg:basis-1/2">
             <div className="relative aspect-video w-full overflow-hidden rounded-xl">
               <Image
                 src={src}
@@ -36,8 +39,10 @@ export function GalleryCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <div className="absolute inset-0 flex items-center justify-between">
+        <CarouselPrevious />
+        <CarouselNext />
+      </div>
     </Carousel>
   )
 }

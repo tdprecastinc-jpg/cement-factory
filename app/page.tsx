@@ -31,7 +31,7 @@ export default function Page() {
       <div className="fixed right-4 bottom-4 z-50">
         <Link href="https://wa.me/2348130000000" target="_blank">
           <span className="before: relative mx-auto inline-block before:absolute before:inset-2 before:-z-10 before:m-auto before:animate-ping before:rounded-full before:bg-green-400/30 before:content-['']">
-            <FaWhatsapp className="relative size-13 rounded-full p-1 text-green-400/40 hover:bg-green-500 hover:text-white md:size-14" />
+            <FaWhatsapp className="relative size-13 rounded-full p-1 text-green-400 hover:bg-green-500 hover:text-white md:size-14" />
           </span>
         </Link>
       </div>
