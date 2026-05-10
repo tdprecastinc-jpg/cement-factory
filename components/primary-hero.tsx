@@ -14,7 +14,7 @@ export default function PrimaryHero() {
         loop
         playsInline
         preload="metadata"
-        poster="/gallery/pic-8.jpeg"
+        poster="/gallery/construction-site.png"
         className="absolute inset-0 -z-20 h-full w-full object-cover"
       >
         <source src="/gallery/construction-site.mp4" type="video/mp4" />
