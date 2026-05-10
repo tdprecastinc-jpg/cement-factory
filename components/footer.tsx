@@ -54,17 +54,19 @@ const links = [
 
 export default function FooterSection() {
   return (
-    <footer role="contentinfo" className="footer-card-tint relative overflow-hidden">
+    <footer
+      role="contentinfo"
+      className="footer-card-tint relative overflow-hidden"
+    >
       <SectionDoodleOverlay
         variant="crosshatch"
         placement="bottom-right"
         className="opacity-20"
-      />
-      {" "}
+      />{" "}
       {/* <Container>
         <div className="h-12"></div>
       </Container> */}
-      <Container asGrid className="relative z-10 bg-card/90">
+      <Container asGrid className="relative z-10 bg-card/90 **:bg-transparent">
         <div className="grid gap-px @4xl:grid-cols-5">
           <div className="space-y-6 bg-foreground/5 p-6 lg:p-12 @4xl:col-span-2">
             <Link
@@ -114,7 +116,7 @@ export default function FooterSection() {
             <div className="flex items-center gap-2 rounded-full border border-transparent py-1 pr-4 pl-2 shadow ring-1 ring-foreground/5">
               <div className="relative flex size-3">
                 <span className="absolute inset-0 block size-full animate-pulse rounded-full bg-emerald-100 duration-1500"></span>
-                <span className="relative m-auto block size-1 rounded-full bg-emerald-500"></span>
+                <span className="relative m-auto block size-1 rounded-full bg-emerald-500!"></span>
               </div>
               <span className="text-sm">Plant Operations Active</span>
             </div>
