@@ -1,6 +1,7 @@
 import { Factory, HardHat, Leaf, ShieldCheck } from "lucide-react"
 import { Container } from "@/components/container"
 import { cn } from "@/lib/utils"
+import { SectionDoodleOverlay } from "@/components/ui/section-doodle-overlay"
 
 const values = [
   {
@@ -37,9 +38,14 @@ export function CoreValuesSection() {
   return (
     <section
       id="core-values"
-      className="scroll-mt-24 bg-card/90 py-24 md:py-32"
+      className="relative scroll-mt-24 overflow-hidden bg-card/90 py-24 md:py-32"
     >
-      <Container asGrid>
+      <SectionDoodleOverlay
+        variant="waves"
+        placement="bottom-right"
+        className="opacity-25"
+      />
+      <Container asGrid className="relative z-10">
         <div className="grid grid-cols-10 gap-px px-6">
           <div aria-hidden className="max-sm:hidden">
             <div data-grid-content />

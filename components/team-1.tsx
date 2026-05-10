@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import { SectionDoodleOverlay } from "@/components/ui/section-doodle-overlay"
 
 type Member = {
   name: string
@@ -41,8 +42,13 @@ const members: Member[] = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-background py-16 md:py-32">
-      <div className="@container mx-auto max-w-6xl px-6 lg:px-12">
+    <section className="relative overflow-hidden bg-card/90 py-16 md:py-32">
+      <SectionDoodleOverlay
+        variant="crosshatch"
+        placement="top-right"
+        className="opacity-20"
+      />
+      <div className="@container relative z-10 mx-auto max-w-6xl px-6 lg:px-12">
         <div>
           <h2 className="text-sm font-semibold tracking-[0.14em] text-muted-foreground uppercase">
             Available Products
@@ -56,7 +62,7 @@ export default function TeamSection() {
             {members.map((member, index) => (
               <div
                 key={index}
-                className="rounded-3xl bg-card p-2 shadow-xl ring-1 shadow-black/3 shadow-black/6.5 ring-border"
+                className="rounded-3xl bg-card p-2 shadow-xl ring-1 shadow-black/6.5 ring-border"
               >
                 <div className="relative aspect-square overflow-hidden rounded-2xl before:absolute before:inset-0 before:z-1 before:rounded-2xl before:border before:border-foreground/10">
                   <div

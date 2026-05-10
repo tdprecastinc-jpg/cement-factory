@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Container } from "@/components/container"
+import { SectionDoodleOverlay } from "@/components/ui/section-doodle-overlay"
 
 const links = [
   {
@@ -53,12 +54,17 @@ const links = [
 
 export default function FooterSection() {
   return (
-    <footer role="contentinfo" className="footer-card-tint">
+    <footer role="contentinfo" className="footer-card-tint relative overflow-hidden">
+      <SectionDoodleOverlay
+        variant="crosshatch"
+        placement="bottom-right"
+        className="opacity-20"
+      />
       {" "}
       {/* <Container>
         <div className="h-12"></div>
       </Container> */}
-      <Container asGrid className="bg-card/90">
+      <Container asGrid className="relative z-10 bg-card/90">
         <div className="grid gap-px @4xl:grid-cols-5">
           <div className="space-y-6 bg-foreground/5 p-6 lg:p-12 @4xl:col-span-2">
             <Link

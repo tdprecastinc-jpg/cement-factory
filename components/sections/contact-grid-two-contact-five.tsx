@@ -1,7 +1,8 @@
 import Link from "next/link"
 import { CheckCircle2 } from "lucide-react"
-import { Container, Separator } from "@/components/container"
+import { Container } from "@/components/container"
 import { EnterpriseForm } from "@/components/enterprise-form"
+import { SectionDoodleOverlay } from "@/components/ui/section-doodle-overlay"
 
 const benefits = [
   "Bulk order pricing support",
@@ -14,9 +15,14 @@ export function ContactGridTwoContactFiveSection() {
   return (
     <section
       id="contact-sales"
-      className="scroll-mt-24 border-b-2 bg-card/90 py-24 md:py-32"
+      className="relative scroll-mt-24 overflow-hidden border-b-2 bg-card/90 py-24 md:py-32"
     >
-      <Container asGrid>
+      <SectionDoodleOverlay
+        variant="zigzag"
+        placement="top-right"
+        className="opacity-20"
+      />
+      <Container asGrid className="relative z-10">
         <span className="px-6! text-sm font-semibold tracking-[0.14em] text-muted-foreground uppercase">
           Sales
         </span>

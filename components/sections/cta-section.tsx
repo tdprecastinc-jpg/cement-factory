@@ -1,15 +1,21 @@
 import Link from "next/link"
 import { Container } from "@/components/container"
 import { Button } from "@/components/ui/button"
+import { SectionDoodleOverlay } from "@/components/ui/section-doodle-overlay"
 import { FaWhatsapp } from "react-icons/fa"
 
 export function CtaSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 border-b-2 bg-card/90 py-12 md:py-24"
+      className="relative scroll-mt-24 overflow-hidden border-b-2 bg-card/90 py-12 md:py-24"
     >
-      <Container asGrid>
+      <SectionDoodleOverlay
+        variant="rings"
+        placement="bottom-left"
+        className="opacity-25"
+      />
+      <Container asGrid className="relative z-10">
         <div className="grid grid-cols-10 gap-px">
           <div aria-hidden className="max-sm:hidden">
             <div data-grid-content />

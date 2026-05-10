@@ -1,6 +1,5 @@
-import { Percent, ThumbsUp } from "lucide-react"
-import Link from "next/link"
-import { FaWhatsapp } from "react-icons/fa6"
+import { ThumbsUp } from "lucide-react"
+import { SectionDoodleOverlay } from "@/components/ui/section-doodle-overlay"
 
 export default function PrimaryHero() {
   return (
@@ -14,7 +13,7 @@ export default function PrimaryHero() {
         loop
         playsInline
         preload="metadata"
-        poster="/gallery/pic-8.jpeg"
+        poster="/gallery/construction-site.png"
         className="absolute inset-0 -z-20 h-full w-full object-cover"
       >
         <source src="/gallery/construction-site.mp4" type="video/mp4" />
@@ -22,8 +21,13 @@ export default function PrimaryHero() {
 
       {/* <div className="absolute inset-0 -z-10 bg-black/10" /> */}
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-black/15 via-black/30 to-black/35 dark:from-black/30 dark:via-black/70 dark:to-black/75" />
+      <SectionDoodleOverlay
+        variant="waves"
+        placement="bottom-right"
+        className="z-0 opacity-25 mix-blend-screen"
+      />
 
-      <div className="m-auto flex min-h-[78svh] max-w-6xl items-center px-6 py-24 md:py-32 lg:min-h-[84svh] lg:px-12">
+      <div className="relative z-10 m-auto flex min-h-[78svh] max-w-6xl items-center px-6 py-24 md:py-32 lg:min-h-[84svh] lg:px-12">
         <div className="max-w-3xl">
           <p className="inline-flex rounded-full border border-white/30 bg-white/10 px-4 py-1 text-sm font-medium tracking-wide text-white/90 backdrop-blur-sm">
             100% Quality Guaranteed{" "}

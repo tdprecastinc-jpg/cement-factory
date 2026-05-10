@@ -1,13 +1,19 @@
 import { Container } from "@/components/container"
 import { GalleryCarousel } from "../gallery-carousel"
+import { SectionDoodleOverlay } from "@/components/ui/section-doodle-overlay"
 
 export function GallerySection() {
   return (
     <section
       id="gallery"
-      className="scroll-mt-24 border-b-2 bg-card/90 py-24 md:py-32"
+      className="relative scroll-mt-24 overflow-hidden border-b-2 bg-card/90 py-24 md:py-32"
     >
-      <Container asGrid>
+      <SectionDoodleOverlay
+        variant="zigzag"
+        placement="bottom-left"
+        className="opacity-30"
+      />
+      <Container asGrid className="relative z-10">
         <div className="grid grid-cols-10 gap-px">
           {/* <div
                         aria-hidden

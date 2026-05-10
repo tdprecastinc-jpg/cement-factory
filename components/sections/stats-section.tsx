@@ -1,4 +1,5 @@
 import { Container } from "@/components/container"
+import { SectionDoodleOverlay } from "@/components/ui/section-doodle-overlay"
 
 const stats = [
   { label: "Monthly Production Capacity", value: "50,000+ tons" },
@@ -11,9 +12,14 @@ export function StatsSection() {
   return (
     <section
       id="products"
-      className="scroll-mt-24 border-b-2 bg-card/90 py-24 md:py-32"
+      className="relative scroll-mt-24 overflow-hidden border-b-2 bg-card/90 py-24 md:py-32"
     >
-      <Container asGrid>
+      <SectionDoodleOverlay
+        variant="blueprint"
+        placement="top-left"
+        className="opacity-25"
+      />
+      <Container asGrid className="relative z-10">
         <div className="grid grid-cols-10 gap-px">
           <div aria-hidden className="max-sm:hidden">
             <div data-grid-content />

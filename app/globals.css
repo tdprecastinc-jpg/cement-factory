@@ -139,4 +139,40 @@ html {
   }
 
   .xv-min-h { min-height: 100svh; min-height: 100vh; }
+
+  @keyframes doodleDrift {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -8px, 0); }
+  }
+
+  @keyframes doodleFloat {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(5px, -4px, 0); }
+  }
+
+  @keyframes doodleDash {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: 72; }
+  }
+
+  .doodle-slow-drift {
+    animation: doodleDrift 18s ease-in-out infinite;
+  }
+
+  .doodle-soft-float {
+    animation: doodleFloat 22s ease-in-out infinite;
+  }
+
+  .doodle-stroke-shift path {
+    stroke-dasharray: 12 10;
+    animation: doodleDash 20s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .doodle-slow-drift,
+    .doodle-soft-float,
+    .doodle-stroke-shift path {
+      animation: none !important;
+    }
+  }
 }
