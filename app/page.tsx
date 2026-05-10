@@ -11,6 +11,7 @@ import PrimaryHero from "@/components/primary-hero"
 import HeroSection from "@/components/secondary-hero-4"
 import { FaWhatsapp } from "react-icons/fa6"
 import Link from "next/link"
+import TeamSection from "../components/team-1"
 
 export default function Page() {
   return (
@@ -21,6 +22,7 @@ export default function Page() {
       <HeroSection />
       <MissionSection />
       <GallerySection />
+      <TeamSection />
       <CoreValuesSection />
       <StatsSection />
       <ContactGridTwoContactFiveSection />
