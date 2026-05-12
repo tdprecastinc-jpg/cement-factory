@@ -1,11 +1,11 @@
-import { Factory, HardHat, Leaf, ShieldCheck } from "lucide-react"
+import { Construction, Factory, Leaf, ShieldCheck } from "lucide-react"
 import { Container } from "@/components/container"
 import { cn } from "@/lib/utils"
 import { SectionDoodleOverlay } from "@/components/ui/section-doodle-overlay"
 
 const values = [
   {
-    icon: HardHat,
+    icon: Construction,
     title: "Quality First",
     iconClassName: "text-green-700",
     description:

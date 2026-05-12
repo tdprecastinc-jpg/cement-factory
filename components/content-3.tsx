@@ -19,15 +19,8 @@ export default function ContentSection() {
           fit any project.
         </h1>
 
-        <div className="mt-12 grid gap-12 md:grid-cols-2">
-          <div className="row-span-3 grid grid-rows-subgrid gap-2">
-            <h3 className="text-base font-semibold text-balance text-foreground dark:text-background">
-              Concrete Blocks
-            </h3>
-            <p className="mb-4 text-base text-muted-foreground dark:text-background/80">
-              Durable and high-strength blocks for reliable construction
-              projects.
-            </p>
+        <div className="grid-template mt-12 grid gap-12 md:grid-cols-2">
+          <div className="row-span-2 grid grid-rows-subgrid gap-2">
             <AspectRatio
               ratio={4 / 3}
               className="rounded-xl border border-transparent bg-white p-6 shadow ring-1 ring-border dark:bg-background/5 dark:ring-background/15"
@@ -40,15 +33,17 @@ export default function ContentSection() {
                 className="aspect-square size-full rounded-xl object-cover"
               />
             </AspectRatio>
+            <div>
+              <h3 className="self-start text-base font-semibold text-balance text-foreground dark:text-background">
+                Concrete Blocks
+              </h3>
+              <p className="text-base text-muted-foreground dark:text-background/80">
+                Durable and high-strength blocks for reliable construction
+                projects.
+              </p>
+            </div>
           </div>
-          <div className="row-span-3 grid grid-rows-subgrid gap-2">
-            <h3 className="text-base font-semibold text-balance text-foreground dark:text-background">
-              Parking Tiles
-            </h3>
-            <p className="mb-4 text-base text-muted-foreground dark:text-background/80">
-              Heavy-duty tiles designed for long-lasting and organized parking
-              spaces.
-            </p>
+          <div className="row-span-2 grid grid-rows-subgrid gap-2">
             <AspectRatio
               ratio={4 / 3}
               className="rounded-xl border border-transparent bg-white p-6 shadow ring-1 ring-border dark:bg-background/5 dark:ring-background/15"
@@ -61,15 +56,17 @@ export default function ContentSection() {
                 className="size-full rounded-xl object-cover"
               />
             </AspectRatio>
+            <div>
+              <h3 className="text-base font-semibold text-balance text-foreground dark:text-background">
+                Parking Tiles
+              </h3>
+              <p className="text-base text-muted-foreground dark:text-background/80">
+                Heavy-duty tiles designed for long-lasting and organized parking
+                spaces.
+              </p>
+            </div>
           </div>
-          <div className="row-span-3 grid grid-rows-subgrid gap-2">
-            <h3 className="text-base font-semibold text-balance text-foreground dark:text-background">
-              Paver Blocks
-            </h3>
-            <p className="mb-4 text-base text-muted-foreground dark:text-background/80">
-              Stylish and durable paving solutions for walkways, driveways, and
-              outdoor spaces.
-            </p>
+          <div className="row-span-2 grid grid-rows-subgrid gap-2">
             <AspectRatio
               ratio={4 / 3}
               className="rounded-xl border border-transparent bg-white p-6 shadow ring-1 ring-border dark:bg-background/5 dark:ring-background/15"
@@ -82,15 +79,17 @@ export default function ContentSection() {
                 className="aspect-square size-full rounded-xl object-cover"
               />
             </AspectRatio>
+            <div>
+              <h3 className="text-base font-semibold text-balance text-foreground dark:text-background">
+                Paver Blocks
+              </h3>
+              <p className="mb-4 text-base text-muted-foreground dark:text-background/80">
+                Stylish and durable paving solutions for walkways, driveways,
+                and outdoor spaces.
+              </p>
+            </div>
           </div>
-          <div className="row-span-3 grid grid-rows-subgrid gap-2">
-            <h3 className="text-base font-semibold text-balance text-foreground dark:text-background">
-              Readymade Walls
-            </h3>
-            <p className="mb-4 text-base text-muted-foreground dark:text-background/80">
-              Fast and efficient precast wall solutions for secure and modern
-              structures.
-            </p>
+          <div className="row-span-2 grid grid-rows-subgrid gap-2">
             <AspectRatio
               ratio={4 / 3}
               className="rounded-xl border border-transparent bg-white p-6 shadow ring-1 ring-border dark:bg-background/5 dark:ring-background/15"
@@ -103,6 +102,15 @@ export default function ContentSection() {
                 className="aspect-square size-full rounded-xl object-cover"
               />
             </AspectRatio>
+            <div>
+              <h3 className="text-base font-semibold text-balance text-foreground dark:text-background">
+                Readymade Walls
+              </h3>
+              <p className="mb-4 text-base text-muted-foreground dark:text-background/80">
+                Fast and efficient precast wall solutions for secure and modern
+                structures.
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ export default function PrimaryHero() {
   return (
     <section
       data-theme="quartz"
-      className="xv-min-h relative isolate overflow-hidden border-b-2 border-border bg-background max-sm:flex"
+      className="xv-min-h relative isolate flex items-center overflow-hidden border-b-2 border-border bg-background max-sm:flex"
     >
       <video
         autoPlay
