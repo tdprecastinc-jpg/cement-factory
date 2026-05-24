@@ -51,7 +51,7 @@ export function ContactGridTwoContactFiveSection() {
                 href="#contact"
                 className="font-medium text-primary hover:underline"
               >
-                Use our contact shortcut above
+                Use our contact shortcut below
               </Link>
             </div>
 

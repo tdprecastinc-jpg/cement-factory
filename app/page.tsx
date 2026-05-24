@@ -13,6 +13,7 @@ import ContentSection from "@/components/content-3"
 
 import Header from "@/components/header"
 import FooterSection from "@/components/footer"
+import BlogSection from "@/components/sections/blog-section"
 
 export default function Page() {
   return (
@@ -25,6 +26,7 @@ export default function Page() {
       <GallerySection />
       <CoreValuesSection />
       <StatsSection />
+      <BlogSection />
       <ContactGridTwoContactFiveSection />
       <CtaSection />
 

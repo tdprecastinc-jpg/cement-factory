@@ -8,7 +8,7 @@ export function CtaSection() {
   return (
     <section
       id="contact"
-      className="relative scroll-mt-24 overflow-hidden border-b-2 bg-card/90 py-12 md:py-24"
+      className="relative scroll-mt-24 overflow-hidden border-b-2 bg-card/90 py-6"
     >
       <SectionDoodleOverlay
         variant="rings"
@@ -24,12 +24,12 @@ export function CtaSection() {
           <div className="col-span-full sm:col-span-8">
             <div
               data-grid-content
-              className="flex flex-col items-start gap-6 p-6 @4xl:p-24"
+              className="flex flex-col items-start gap-8 p-6 @4xl:p-24"
             >
-              <h2 className="text-4xl font-semibold text-balance text-foreground">
+              <h2 className="text-3xl font-semibold text-balance text-foreground sm:text-5xl">
                 Need cement or blocks for your next project?
               </h2>
-              <p className="max-w-2xl text-base text-muted-foreground">
+              <p className="max-w-2xl text-base leading-relaxed text-balance text-muted-foreground sm:text-lg">
                 Talk to our team about bulk orders, custom delivery schedules,
                 and product recommendations for residential, commercial, and
                 infrastructure builds.
@@ -44,8 +44,7 @@ export function CtaSection() {
                   href="https://api.whatsapp.com/send?phone=918798516721"
                   target="_blank"
                 >
-                  Contact Our Sales Team{" "}
-                  <FaWhatsapp className="size-4 text-green-500" />
+                  Contact Us <FaWhatsapp className="size-6 text-green-500" />
                 </Link>
               </Button>
             </div>
