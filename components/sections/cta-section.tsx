@@ -30,7 +30,7 @@ export function CtaSection() {
         <div className="absolute inset-0 -z-10">
           <MapIllustration />
         </div>
-        <div className="grid grid-cols-10 gap-px bg-background/80! backdrop-blur-[1px]">
+        <div className="grid grid-cols-10 gap-px bg-background/80 backdrop-blur-[1px] dark:bg-card/70 dark:shadow-[0_1px_1px_hsl(0_0%_0%/0.075),0_2px_2px_hsl(0_0%_0%/0.075),0_4px_4px_hsl(0_0%_0%/0.075),0_8px_8px_hsl(0_0%_0%/0.075),0_16px_16px_hsl(0_0%_0%/0.075)]">
           {/* <div aria-hidden className="max-sm:hidden">
             <div data-grid-content />
           </div> */}

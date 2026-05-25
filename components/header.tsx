@@ -152,7 +152,7 @@ export default function HeaderOne() {
       >
         <div
           className={cn(
-            "fixed inset-x-0 top-0 z-50 in-data-scrolled:border-b in-data-scrolled:bg-background/85 in-data-scrolled:backdrop-blur",
+            "fixed inset-x-0 top-0 z-50 in-data-scrolled:border-b in-data-scrolled:bg-background/85 in-data-scrolled:backdrop-blur dark:in-data-scrolled:bg-card/90",
             !isLarge && "h-14 overflow-hidden border-b",
             isMobileMenuOpen && "h-screen bg-background/75 backdrop-blur"
           )}
