@@ -1,9 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "dither-plugin";
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 0rem;
 }
 
 @custom-variant dark (&:is(.dark *));

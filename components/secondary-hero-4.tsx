@@ -19,7 +19,7 @@ export default function HeroSection() {
         </h1>
         <ImageIllustration />
         <div className="relative mt-6 grid items-end gap-6 md:grid-cols-2">
-          <p className="text-lg text-balance text-foreground/85">
+          <p className="text-base text-balance text-foreground/85 sm:text-lg">
             We manufacture high-quality concrete blocks, parking tiles, paver
             blocks, and readymade walls with a focus on durability, precision,
             and dependable delivery for residential, commercial, and industrial

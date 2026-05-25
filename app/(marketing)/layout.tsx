@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Header from "@/components/header"
 import FooterSection from "@/components/footer"
 
 export const metadata: Metadata = {
@@ -14,14 +13,10 @@ export default function MarketingLayout({
 }>) {
   return (
     <>
-      <Header />
-      <main
-        role="main"
-        className="bg-muted [--color-primary:var(--color-indigo-500)]"
-      >
+      <main role="main" className="bg-background">
         {children}
       </main>
-      <FooterSection />
+      {/* <FooterSection /> */}
     </>
   )
 }

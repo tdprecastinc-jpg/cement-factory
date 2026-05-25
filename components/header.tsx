@@ -152,7 +152,7 @@ export default function HeaderOne() {
       >
         <div
           className={cn(
-            "fixed inset-x-0 top-0 z-50 in-data-scrolled:border-b in-data-scrolled:bg-background/50 in-data-scrolled:backdrop-blur",
+            "fixed inset-x-0 top-0 z-50 in-data-scrolled:border-b in-data-scrolled:bg-background/85 in-data-scrolled:backdrop-blur",
             !isLarge && "h-14 overflow-hidden border-b",
             isMobileMenuOpen && "h-screen bg-background/75 backdrop-blur"
           )}
@@ -195,7 +195,7 @@ export default function HeaderOne() {
                 <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                   <Button
                     asChild
-                    className="group hover:bg-green-500"
+                    className="group border border-foreground/30 hover:border-green-500 hover:bg-green-500"
                     variant="secondary"
                     size="sm"
                   >

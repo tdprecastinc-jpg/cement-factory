@@ -27,7 +27,7 @@ export default function Page() {
       <CoreValuesSection />
       <StatsSection />
       <BlogSection />
-      <ContactGridTwoContactFiveSection />
+      {/* <ContactGridTwoContactFiveSection /> */}
       <CtaSection />
 
       <div className="fixed right-4 bottom-4 z-50">

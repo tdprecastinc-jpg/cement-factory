@@ -5,7 +5,7 @@ export function MissionSection() {
   return (
     <section
       id="mission"
-      className="relative scroll-mt-24 overflow-hidden border-b-2 bg-card/90 py-24 md:py-32"
+      className="relative overflow-hidden border-b-2 bg-card/90 py-24 md:py-32"
     >
       <SectionDoodleOverlay
         variant="rings"

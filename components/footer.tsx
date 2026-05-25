@@ -8,19 +8,19 @@ const links = [
     items: [
       {
         title: "Our Mission",
-        href: "#mission",
+        href: "/#mission",
       },
       {
         title: "Gallery",
-        href: "#gallery",
+        href: "/#gallery",
       },
       {
         title: "Blog",
-        href: "#blogs",
+        href: "/#blogs",
       },
       {
         title: "Contact",
-        href: "#contact",
+        href: "/#contact",
       },
     ],
   },
@@ -72,7 +72,7 @@ export default function FooterSection() {
       </Container> */}
       <Container asGrid className="relative z-10 bg-card/90 **:bg-transparent">
         <div className="grid gap-px @4xl:grid-cols-5">
-          <div className="space-y-6 bg-foreground/5 p-6 lg:p-12 @4xl:col-span-2">
+          <div className="space-y-6 bg-foreground/5 px-6 py-12 lg:p-12 @4xl:col-span-2">
             <Link
               href="/"
               aria-label="go home"

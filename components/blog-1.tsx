@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card"
 import { useMemo, useState } from "react"
 import { cn } from "@/lib/utils"
 import { useMedia } from "@/hooks/use-media"
+import { Post } from "@/types/post"
 
 const SHADCN_AVATAR = "https://avatars.githubusercontent.com/u/124599?v=4"
 const MESCHAC_AVATAR = "https://avatars.githubusercontent.com/u/47919550?v=4"
@@ -39,7 +40,7 @@ interface Author {
   image: string
 }
 
-export default function Blog() {
+export default function Blog({ posts }: { posts: Post[] }) {
   const [activeFilter, setActiveFilter] = useState<Filter>("all")
   //   const filters: Filter[] = [
   //     "all",
@@ -51,46 +52,43 @@ export default function Blog() {
   //     "press",
   //   ]
 
+  /**
+   * 
+   * order(publishedAt desc)[0...${limit}]{
+      _id,
+      title,
+      description,
+      "slug": slug.current,
+      "href": slug.current,
+      publishedAt,
+      "date": publishedAt,
+      "image": image.asset->url,
+      category->{
+        title,
+        "slug": slug.current
+      },
+      authors[]->{
+        name,
+        "image": image.asset->url
+      }
+   */
+
   const rawArticles: Article[] = useMemo(
-    () => [
-      {
-        title: "Choosing the Right Concrete Blocks for Your Project",
-        description:
-          "Compare solid, hollow, and lightweight blocks to find the perfect match for residential, commercial, and infrastructure builds.",
-        category: "company",
-        image:
-          "https://raw.githubusercontent.com/tailark/assets/refs/heads/main/time_djv8te.webp",
-        date: "May 22, 2026",
-        href: "#",
-        authors: [
-          {
-            name: "TD",
-            image: MESCHAC_AVATAR,
-          },
-        ],
-      },
-      {
-        title: "Paver Tiles vs. Readymade Walls: What to Use Where",
-        description:
-          "A practical guide to choosing between paver blocks and prefabricated walls for driveways, pathways, and boundary projects.",
-        category: "marketing",
-        image:
-          "https://raw.githubusercontent.com/tailark/assets/refs/heads/main/article-2_rey9it.png",
-        date: "May 22, 2026",
-        href: "#",
-        authors: [
-          {
-            name: "TD",
-            image: THEO_AVATAR,
-          },
-          {
-            name: "TD",
-            image: MESCHAC_AVATAR,
-          },
-        ],
-      },
-    ],
-    []
+    () =>
+      posts.map((post) => ({
+        title: post.title,
+        description: post.description,
+        category: post.category.title,
+        image: post.image,
+        date: new Date(post.publishedAt).toLocaleDateString("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        }),
+        href: `/blog/${post.slug}`,
+        authors: post.authors,
+      })),
+    [posts]
   )
 
   const categoryCounts = useMemo(() => {

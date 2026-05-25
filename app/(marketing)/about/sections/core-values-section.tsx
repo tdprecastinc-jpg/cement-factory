@@ -48,7 +48,7 @@ export function CoreValuesSection() {
   return (
     <section
       id="core-values"
-      className="relative scroll-mt-24 overflow-hidden bg-card/90 py-24 md:py-32"
+      className="relative overflow-hidden border-b border-foreground/10 bg-card/90 py-24 md:py-32"
     >
       <SectionDoodleOverlay
         variant="waves"
@@ -80,11 +80,13 @@ export function CoreValuesSection() {
                 data-grid-content
                 className="flex flex-col gap-3 p-6 @4xl:p-12"
               >
-                <value.icon className={cn("size-12", value.iconClassName)} />
+                <value.icon
+                  className={cn("size-10 sm:size-12", value.iconClassName)}
+                />
                 <h3 className="text-lg font-medium text-foreground">
                   {value.title}
                 </h3>
-                <p className="text-base leading-relaxed text-foreground">
+                <p className="text-base leading-relaxed text-muted-foreground">
                   {value.description}
                 </p>
               </div>

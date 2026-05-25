@@ -1,17 +1,33 @@
+"use client"
+
 import { Check, ChevronDown, ThumbsUp } from "lucide-react"
 import { SectionDoodleOverlay } from "@/components/ui/section-doodle-overlay"
 import { FaWhatsapp } from "react-icons/fa"
+import { useMotionValueEvent, useScroll } from "motion/react"
+import React from "react"
+import { cn } from "@/lib/utils"
 
 export default function PrimaryHero() {
+  const [isScrolled, setIsScrolled] = React.useState(false)
+
+  const { scrollY } = useScroll()
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsScrolled(latest > 200)
+  })
+
   return (
     <section
       data-theme="quartz"
       className="xv-min-h relative isolate flex items-center overflow-hidden border-b-2 border-border bg-background max-sm:flex"
+      {...(isScrolled && { "data-scrolled": true })}
     >
-      <div className="absolute inset-x-0 bottom-0 mx-auto">
+      <div className="absolute inset-x-0 bottom-0 mx-auto transition-opacity duration-300 in-data-scrolled:opacity-0">
         <div className="mx-auto w-fit">
           <div className="flex flex-col items-center justify-center">
-            <span className="text-sm font-medium text-white uppercase opacity-50">
+            <span
+              className={"text-sm font-medium text-white uppercase opacity-50"}
+            >
               Scroll Down
             </span>
             <ChevronDown className="size-10 animate-bounce text-white/70" />
