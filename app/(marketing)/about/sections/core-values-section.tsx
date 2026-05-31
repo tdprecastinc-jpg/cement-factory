@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils"
 import { SectionDoodleOverlay } from "@/components/ui/section-doodle-overlay"
 import { GiSafetyPin } from "react-icons/gi"
 import { MdOutlineHealthAndSafety } from "react-icons/md"
+import Image from "next/image"
 
 const values = [
   {
@@ -74,23 +75,35 @@ export function CoreValuesSection() {
               </p>
             </div>
 
-            {values.map((value) => (
-              <div
-                key={value.title}
-                data-grid-content
-                className="flex flex-col gap-3 p-6 @4xl:p-12"
-              >
-                <value.icon
-                  className={cn("size-10 sm:size-12", value.iconClassName)}
-                />
-                <h3 className="text-lg font-medium text-foreground">
-                  {value.title}
-                </h3>
-                <p className="text-base leading-relaxed text-muted-foreground">
-                  {value.description}
-                </p>
+            <div className="col-span-full grid grid-cols-1 gap-2 p-6 @4xl:grid-cols-2 @4xl:pl-12">
+              <div className="grid gap-8 @4xl:col-span-1">
+                {values.map((value) => (
+                  <div
+                    key={value.title}
+                    data-grid-content
+                    className="flex flex-col gap-2"
+                  >
+                    <span className="flex items-center gap-1">
+                      <value.icon className={cn("size-4")} />
+                      <h3 className="text-sm font-medium text-foreground">
+                        {value.title}
+                      </h3>
+                    </span>
+                    <p className="text-base leading-relaxed text-muted-foreground">
+                      {value.description}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+              <div className="relative translate-x-8 translate-y-8 overflow-hidden">
+                <Image
+                  src="/gallery/worker.webp"
+                  alt="Core Values"
+                  fill
+                  className="rounded-4xl object-cover"
+                />
+              </div>
+            </div>
           </div>
 
           <div aria-hidden className="max-sm:hidden">
