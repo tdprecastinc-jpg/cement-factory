@@ -9,32 +9,32 @@ const values = [
   {
     icon: CheckCircle2,
     title: "Quality First",
-    variableColor: "var(--color-green-600)",
-    iconClassName: "group-hover:text-green-600 transition-colors duration-300",
+    variableColor: "var(--color-green-400)",
+    iconClassName: "group-hover:text-green-400 transition-colors duration-300",
     description:
       "Every batch is tested for strength, consistency, and durability before leaving our plant.",
   },
   {
     icon: MdOutlineHealthAndSafety,
     title: "Worker Safety",
-    variableColor: "var(--color-yellow-600)",
-    iconClassName: "group-hover:text-yellow-600 transition-colors duration-300",
+    variableColor: "var(--color-yellow-400)",
+    iconClassName: "group-hover:text-yellow-400 transition-colors duration-300",
     description:
       "We enforce strict safety standards across production lines, loading zones, and delivery operations.",
   },
   {
     icon: Leaf,
     title: "Sustainable Production",
-    variableColor: "var(--color-blue-600)",
-    iconClassName: "group-hover:text-blue-600 transition-colors duration-300",
+    variableColor: "var(--color-blue-400)",
+    iconClassName: "group-hover:text-blue-400 transition-colors duration-300",
     description:
       "Our process reduces waste and optimizes resource use to lower environmental impact over time.",
   },
   {
     icon: Factory,
     title: "Industrial Scale",
-    variableColor: "var(--color-red-600)",
-    iconClassName: "group-hover:text-red-600 transition-colors duration-300",
+    variableColor: "var(--color-red-400)",
+    iconClassName: "group-hover:text-red-400 transition-colors duration-300",
     description:
       "From neighborhood projects to major infrastructure, we deliver dependable volume without sacrificing quality.",
   },
@@ -64,13 +64,13 @@ export function CoreValuesSection() {
               </h2>
               <p className="mt-6 max-w-2xl text-3xl leading-[1.2] font-medium font-semibold text-balance text-foreground sm:text-4xl md:text-5xl">
                 The{" "}
-                <span className="font-semibold text-green-600">principles</span>{" "}
+                <span className="font-semibold text-green-400">principles</span>{" "}
                 that guide every production run, quality check, and delivery
                 from our factory.
               </p>
             </div>
 
-            <div className="col-span-full grid grid-cols-1 gap-2 p-6 max-sm:gap-6 @4xl:grid-cols-2 @4xl:pl-12">
+            <div className="col-span-full grid grid-cols-1 gap-2 bg-card/90 p-6 max-sm:gap-6 @4xl:grid-cols-2 @4xl:pl-12">
               <div className="flex flex-col gap-2 overflow-hidden @4xl:col-span-1">
                 {values.map((value) => (
                   <div
@@ -88,8 +88,7 @@ export function CoreValuesSection() {
                       />
                       <h3
                         className={cn(
-                          "text-sm font-medium text-foreground/80",
-                          value.iconClassName
+                          "text-sm font-medium text-foreground/80 transition-colors duration-300 group-hover:text-(--color-value)"
                         )}
                       >
                         {value.title}

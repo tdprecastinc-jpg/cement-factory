@@ -49,7 +49,7 @@ export function CtaSection() {
                   Request a quotation
                 </span>
                 <h2 className="mb-4 text-3xl font-semibold text-balance text-foreground sm:text-5xl">
-                  Let&apos;s <span className="text-green-600">build</span> your
+                  Let&apos;s <span className="text-green-400">build</span> your
                   next project together
                 </h2>
                 <p className="max-w-2xl text-base leading-relaxed text-balance text-muted-foreground sm:text-lg">
@@ -169,5 +169,5 @@ const ContactRow = ({
     )
   }
 
-  return <div className={className}>{content}</div>
+  return <div className={cn(className, "select-none")}>{content}</div>
 }
