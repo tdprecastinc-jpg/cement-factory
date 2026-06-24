@@ -9,6 +9,7 @@ export const FingerprintScanIllustration = () => {
           src="/gallery/fingerprint-scanner.png"
           alt="Fingerprint scanner"
           className="size-full scale-110 object-cover"
+          priority
           width={224}
           height={224}
         />

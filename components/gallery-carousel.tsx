@@ -23,7 +23,7 @@ export function GalleryCarousel() {
           delay: 5000,
         }),
       ]}
-      className="w-full p-6"
+      className="w-full py-6"
     >
       <CarouselContent className="-ml-4">
         {gridImages.map((src) => (
