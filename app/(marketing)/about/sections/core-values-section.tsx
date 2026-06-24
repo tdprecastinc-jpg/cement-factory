@@ -4,62 +4,20 @@ import Image from "next/image"
 import { Container } from "@/components/container"
 import { cn } from "@/lib/utils"
 import { SectionDoodleOverlay } from "@/components/ui/section-doodle-overlay"
-
-const values = [
-  {
-    icon: CheckCircle2,
-    title: "Quality First",
-    accentClassName:
-      "group-hover:text-green-600 dark:group-hover:text-green-400",
-    borderClassName:
-      "hover:border-green-600/50 dark:hover:border-green-400/50",
-    description:
-      "Every batch is tested for strength, consistency, and durability before leaving our plant.",
-  },
-  {
-    icon: MdOutlineHealthAndSafety,
-    title: "Worker Safety",
-    accentClassName:
-      "group-hover:text-yellow-600 dark:group-hover:text-yellow-400",
-    borderClassName:
-      "hover:border-yellow-600/50 dark:hover:border-yellow-400/50",
-    description:
-      "We enforce strict safety standards across production lines, loading zones, and delivery operations.",
-  },
-  {
-    icon: Leaf,
-    title: "Sustainable Production",
-    accentClassName:
-      "group-hover:text-blue-600 dark:group-hover:text-blue-400",
-    borderClassName:
-      "hover:border-blue-600/50 dark:hover:border-blue-400/50",
-    description:
-      "Our process reduces waste and optimizes resource use to lower environmental impact over time.",
-  },
-  {
-    icon: Factory,
-    title: "Industrial Scale",
-    accentClassName:
-      "group-hover:text-red-600 dark:group-hover:text-red-400",
-    borderClassName:
-      "hover:border-red-600/50 dark:hover:border-red-400/50",
-    description:
-      "From neighborhood projects to major infrastructure, we deliver dependable volume without sacrificing quality.",
-  },
-]
+import FeaturesSection from "@/components/features-11"
 
 export function CoreValuesSection() {
   return (
     <section
       id="core-values"
-      className="relative overflow-hidden border-b border-foreground/10 bg-card/90 py-24 md:py-32"
+      className="relative overflow-hidden border-b border-foreground/10 bg-card/90"
     >
       <SectionDoodleOverlay
         variant="waves"
         placement="bottom-right"
         className="opacity-25"
       />
-      <Container asGrid className="relative z-10">
+      {/* <Container asGrid className="relative z-10">
         <div className="grid grid-cols-10 gap-px px-6">
           <div aria-hidden className="max-sm:hidden">
             <div data-grid-content />
@@ -128,7 +86,8 @@ export function CoreValuesSection() {
             <div data-grid-content />
           </div>
         </div>
-      </Container>
+      </Container> */}
+      <FeaturesSection />
     </section>
   )
 }

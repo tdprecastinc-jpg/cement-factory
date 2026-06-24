@@ -126,7 +126,7 @@ export default function Blog({ posts }: { posts: Post[] }) {
   const lastArticles = isMobile ? 1 : isMedium ? 2 : 3
 
   return (
-    <section className="@container bg-background py-16 md:py-24 dark:bg-card">
+    <section className="@container bg-background dark:bg-card">
       <div className="mx-auto max-w-5xl px-6">
         <div className="max-w-md">
           <span className="text-muted-foreground">Blog</span>

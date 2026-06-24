@@ -56,9 +56,8 @@ export function CtaSection() {
                   your next project together
                 </h2>
                 <p className="max-w-2xl text-base leading-relaxed text-balance text-muted-foreground sm:text-lg">
-                  Tell us about your concrete and block requirements. Our team
-                  gets back within 24 hours with pricing, availability, and
-                  delivery options for your site.
+                  We&apos;re here to help. Reach out with your requirements and
+                  we&apos;ll guide you through the next steps.
                 </p>
               </div>
 
@@ -80,7 +79,7 @@ export function CtaSection() {
                 ))}
               </div> */}
 
-              <div className="grid w-full gap-6 pt-6 sm:grid-cols-2">
+              <div className="mt-6 grid w-full gap-6 sm:grid-cols-2">
                 <ContactRow
                   icon={<Mail className="size-4" />}
                   label="Email us"
@@ -117,6 +116,16 @@ export function CtaSection() {
                 </Link>
               </Button> */}
             </div>
+          </div>
+
+          <div className="col-span-full mt-6 h-full w-full overflow-hidden rounded-lg px-6 @4xl:px-24">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.6675437711765!2d94.64727169999999!3d27.6348114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3740ed65fdbc90fd%3A0xca468f24c54ec1da!2sT.D%20block%20factory!5e0!3m2!1sen!2sng!4v1782277613693!5m2!1sen!2sng"
+              className="aspect-video w-full"
+              style={{ border: "0" }}
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            ></iframe>
           </div>
 
           {/* <div aria-hidden className="max-sm:hidden">
