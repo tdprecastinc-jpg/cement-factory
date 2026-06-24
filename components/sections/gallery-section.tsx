@@ -22,7 +22,7 @@ export function GallerySection() {
                     </div> */}
 
           <div className="col-span-full grid gap-px">
-            <div data-grid-content className="px-3 py-6 @4xl:p-12">
+            <div className="px-3 py-6 @4xl:py-12">
               <h2 className="text-sm font-semibold tracking-[0.14em] text-muted-foreground uppercase">
                 Factory Gallery
               </h2>
