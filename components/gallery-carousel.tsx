@@ -23,22 +23,24 @@ export function GalleryCarousel() {
           delay: 5000,
         }),
       ]}
-      className="w-full py-6"
+      className="w-full px-3 py-6"
     >
-      <CarouselContent className="-ml-4">
-        {gridImages.map((src) => (
-          <CarouselItem key={src} className="basis-full pl-4 lg:basis-1/2">
-            <div className="relative aspect-video w-full overflow-hidden rounded-xl">
-              <Image
-                src={src}
-                alt="Featured cement factory scene"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
+      <div className="relative">
+        <CarouselContent className="relative -ml-6">
+          {gridImages.map((src) => (
+            <CarouselItem key={src} className="basis-full pl-4 lg:basis-1/2">
+              <div className="relative aspect-video w-full overflow-hidden rounded-xl">
+                <Image
+                  src={src}
+                  alt="Featured cement factory scene"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </div>
       <div className="mt-2 flex justify-end gap-2">
         <CarouselPrevious />
         <CarouselNext />
