@@ -10,7 +10,7 @@ export function CoreValuesSection() {
   return (
     <section
       id="core-values"
-      className="relative overflow-hidden border-b border-foreground/10 bg-card/90"
+      className="relative overflow-hidden border-b border-foreground/10 bg-card/90 py-24 md:py-32"
     >
       <SectionDoodleOverlay
         variant="waves"

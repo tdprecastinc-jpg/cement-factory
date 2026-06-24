@@ -52,7 +52,7 @@ const values = [
 
 export default function FeaturesSection() {
   return (
-    <section className="@container py-16 md:py-32">
+    <section className="@container">
       <div className="mx-auto mb-12 max-w-5xl px-6 xl:px-0">
         <h2 className="text-balance text-muted-foreground">Core Values</h2>
         <p className="mt-6 max-w-2xl text-3xl leading-[1.2] font-medium font-semibold text-balance text-foreground sm:text-4xl md:text-5xl">

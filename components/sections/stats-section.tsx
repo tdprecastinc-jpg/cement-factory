@@ -26,7 +26,10 @@ export function StatsSection() {
           </div>
 
           <div className="col-span-full grid gap-px sm:col-span-8 @4xl:grid-cols-2">
-            <div data-grid-content className="col-span-full p-6 @4xl:p-12">
+            <div
+              data-grid-content
+              className="col-span-full px-3 py-6 @4xl:p-12"
+            >
               <h2 className="text-balance text-muted-foreground">
                 Trusted Capacity
               </h2>
@@ -37,7 +40,11 @@ export function StatsSection() {
             </div>
 
             {stats.map((stat) => (
-              <div key={stat.label} data-grid-content className="p-6 @4xl:p-12">
+              <div
+                key={stat.label}
+                data-grid-content
+                className="px-3 py-6 @4xl:p-12"
+              >
                 <p className="text-3xl font-semibold text-foreground">
                   {stat.value}
                 </p>
